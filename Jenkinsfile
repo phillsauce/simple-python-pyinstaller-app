@@ -1,19 +1,4 @@
 pipeline {
-    agent none 
-    stages {
-        stage('Build') { 
-            agent {
-                docker {
-                    image 'python:2-alpine' 
-                }
-            }
-            steps {
-                sh 'python -m py_compile sources/add2vals.py sources/calc.py' 
-            }
-        }
-    }
-}
-=======
     agent none
     stages {
         stage('Build') {
@@ -23,7 +8,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'pyth3on -m py_compile sources/add2vals.py sources/calc.py'
+                sh 'python3 -m py_compile sources/add2vals.py sources/calc.py'
             }
         }
         stage('Test') {
@@ -58,4 +43,3 @@ pipeline {
         }
     }
 }
->>>>>>> b871a79e1b64c5eea3a98ba9b27a2978befd7378
