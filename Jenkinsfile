@@ -24,7 +24,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'pytho3n -m py_compile sources/add2vals.py sources/calc.py'
+                sh 'python -m py_compile sources/add2vals.py sources/calc3.py'
             }
         }
         stage('Test') {
