@@ -1,5 +1,4 @@
 pipeline {
-<<<<<<< HEAD
     agent none 
     stages {
         stage('Build') { 
@@ -24,7 +23,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'python -m py_compile sources/add2vals.py sources/calc.py'
+                sh 'pyth3on -m py_compile sources/add2vals.py sources/calc.py'
             }
         }
         stage('Test') {
